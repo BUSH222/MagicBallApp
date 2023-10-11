@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_72" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -12,15 +13,60 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MagicBallApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ball1" translatesAutoresizingMaskIntoConstraints="NO" id="G7F-Mi-nGG">
+                                <rect key="frame" x="95" y="346" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="UXr-qc-YWO"/>
+                                    <constraint firstAttribute="width" constant="240" id="uIR-vw-TMS"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shake me!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SeL-TD-QZK">
+                                <rect key="frame" x="95" y="226" width="240" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="3OX-P0-X6i"/>
+                                    <constraint firstAttribute="width" constant="240" id="UhW-7E-zYs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="50"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FcC-jB-WQB">
+                                <rect key="frame" x="140" y="626" width="150" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="UmU-m5-ooL"/>
+                                    <constraint firstAttribute="height" constant="50" id="xzd-gx-ClN"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Or press here"/>
+                                <connections>
+                                    <action selector="BoringButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6N6-jS-syJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="SeL-TD-QZK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AmH-7s-Z8l"/>
+                            <constraint firstItem="FcC-jB-WQB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BAh-mN-QFd"/>
+                            <constraint firstItem="G7F-Mi-nGG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KCJ-Ry-eT0"/>
+                            <constraint firstItem="G7F-Mi-nGG" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="VCD-BY-O1i"/>
+                            <constraint firstItem="G7F-Mi-nGG" firstAttribute="top" secondItem="SeL-TD-QZK" secondAttribute="bottom" constant="60" id="aLc-H8-tOP"/>
+                            <constraint firstItem="FcC-jB-WQB" firstAttribute="top" secondItem="G7F-Mi-nGG" secondAttribute="bottom" constant="40" id="puD-IT-Opb"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="ballPicture" destination="G7F-Mi-nGG" id="llp-Y5-Ffx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-48.091603053435115" y="-27.464788732394368"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ball1" width="305" height="273.66665649414062"/>
+    </resources>
 </document>
