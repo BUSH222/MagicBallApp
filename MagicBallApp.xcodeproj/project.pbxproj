@@ -16,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		19EBB6632AD70F020080F874 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		EC745B572A828CBD00B1785B /* MagicBallApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MagicBallApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC745B5A2A828CBD00B1785B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC745B5C2A828CBD00B1785B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +61,7 @@
 				EC745B5C2A828CBD00B1785B /* SceneDelegate.swift */,
 				EC745B5E2A828CBD00B1785B /* ViewController.swift */,
 				EC745B602A828CBD00B1785B /* Main.storyboard */,
+				19EBB6632AD70F020080F874 /* README.md */,
 				EC745B632A828CBE00B1785B /* Assets.xcassets */,
 				EC745B652A828CBE00B1785B /* LaunchScreen.storyboard */,
 				EC745B682A828CBE00B1785B /* Info.plist */,
